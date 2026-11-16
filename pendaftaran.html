@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT. ZAKYABADI | Custom Logo Futsal & Bola - Digital Modern | Cepat</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk Ikon Olahraga & UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        zaky: {
+                            navy: '#000066',
+                            deep: '#0A0A5C',
+                            dark: '#050538',
+                            light: '#EEF0FF',
+                            accent: '#2563EB'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Kustomisasi scrollbar & pola latar belakang halus */
+        .bg-grid-pattern {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-zaky-navy selection:text-white">
+
+    <!-- ==================== 1. HEADER / NAVBAR ==================== -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Geometris Monogram Z & Nama Perusahaan -->
+                <a href="#" class="flex items-center gap-3.5 group">
+                    <div class="w-11 h-11 bg-zaky-navy rounded-xl flex items-center justify-center shadow-md shadow-zaky-navy/25 group-hover:bg-zaky-deep transition-colors">
+                        <!-- SVG Monogram Z Geometris sesuai halaman 1 Company Profile -->
+                        <svg viewBox="0 0 100 100" class="w-7 h-7 fill-white" xmlns="http://www.w3.org/2000/svg">
+                            <polygon points="32,12 72,12 58,30 40,30 22,50 40,72 28,88 6,50" />
+                            <polygon points="82,12 96,12 56,72 86,72 95,88 34,88" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display font-extrabold text-xl tracking-tight text-zaky-navy block leading-none">PT. ZAKYABADI</span>
+                        <span class="text-[11px] font-semibold uppercase tracking-widest text-slate-500 mt-1 block">Custom Logo Sport</span>
+                    </div>
+                </a>
+
+                <!-- Navigasi Desktop -->
+                <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                    <a href="#tentang" class="hover:text-zaky-navy transition-colors">Tentang Kami</a>
+                    <a href="#layanan" class="hover:text-zaky-navy transition-colors">Layanan & Paket</a>
+                    <a href="#portofolio" class="hover:text-zaky-navy transition-colors">Portofolio Klien</a>
+                    <a href="#pemesanan" class="hover:text-zaky-navy transition-colors">Form Pemesanan</a>
+                    <a href="#kontak" class="hover:text-zaky-navy transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Tombol CTA Desktop & Hamburger Mobile -->
+                <div class="flex items-center gap-3">
+                    <a href="#pemesanan" class="hidden sm:inline-flex items-center gap-2 bg-zaky-navy hover:bg-zaky-deep text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-zaky-navy/20 transition-all">
+                        <span>Pesan Sekarang</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <button id="mobile-menu-btn" aria-label="Buka Menu" class="md:hidden p-2.5 rounded-xl text-zaky-navy hover:bg-zaky-light transition-colors">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigasi Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-3 pb-5 space-y-2 shadow-lg">
+            <a href="#tentang" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-zaky-light hover:text-zaky-navy">Tentang Kami</a>
+            <a href="#layanan" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-zaky-light hover:text-zaky-navy">Layanan & Paket</a>
+            <a href="#portofolio" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-zaky-light hover:text-zaky-navy">Portofolio Klien</a>
+            <a href="#pemesanan" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-zaky-light hover:text-zaky-navy">Form Pemesanan</a>
+            <a href="#kontak" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-zaky-light hover:text-zaky-navy">Kontak</a>
+            <div class="pt-2">
+                <a href="#pemesanan" class="block text-center bg-zaky-navy text-white font-semibold py-3 rounded-xl shadow">Pesan Logo Sekarang</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-zaky-dark via-zaky-navy to-zaky-deep text-white bg-grid-pattern">
+        <!-- Dekorasi Lingkaran Abstrak sudut kanan seperti gaya Company Profile -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-32 -left-24 w-80 h-80 bg-indigo-400/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Kolom Teks Utama -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 backdrop-blur-sm text-xs sm:text-sm font-semibold tracking-wide text-blue-100">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>COMPANY PROFILE & PEMESANAN RESMI</span>
+                    </div>
+                    
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[52px] leading-[1.15] tracking-tight">
+                        Custom Logo Futsal & Bola <span class="block text-blue-300 mt-1">Digital Modern | Cepat</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-blue-100/90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        <strong>PT. ZAKYABADI</strong> membantu tim futsal, komunitas olahraga, dan klub sepak bola memiliki identitas visual yang digital, modern, dan siap digunakan—mulai dari logo sederhana hingga desain jersey lengkap.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#pemesanan" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white text-zaky-navy hover:bg-blue-50 font-bold px-7 py-4 rounded-2xl shadow-xl shadow-black/20 transition-all text-base">
+                            <i class="fa-solid fa-pen-nib"></i>
+                            <span>Pesan Sekarang</span>
+                        </a>
+                        <a href="#layanan" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/25 font-semibold px-7 py-4 rounded-2xl transition-all text-base">
+                            <span>Lihat Paket Layanan</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Keunggulan Singkat -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-white/15 max-w-lg mx-auto lg:mx-0 text-left">
+                        <div>
+                            <p class="font-display font-extrabold text-xl sm:text-2xl text-white">100%</p>
+                            <p class="text-xs text-blue-200">Desain Original</p>
+                        </div>
+                        <div>
+                            <p class="font-display font-extrabold text-xl sm:text-2xl text-white">Cepat</p>
+                            <p class="text-xs text-blue-200">Proses Efisien</p>
+                        </div>
+                        <div>
+                            <p class="font-display font-extrabold text-xl sm:text-2xl text-white">Siap Pakai</p>
+                            <p class="text-xs text-blue-200">PNG, Vector & Jersey</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Visual / Kartu Identitas PT. ZAKYABADI -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+                        <div class="bg-zaky-navy border border-white/15 rounded-2xl p-8 flex flex-col items-center text-center shadow-inner">
+                            <!-- Monogram Besar -->
+                            <div class="w-24 h-24 rounded-2xl bg-white/10 flex items-center justify-center mb-5 border border-white/20">
+                                <svg viewBox="0 0 100 100" class="w-16 h-16 fill-white" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="32,12 72,12 58,30 40,30 22,50 40,72 28,88 6,50" />
+                                    <polygon points="82,12 96,12 56,72 86,72 95,88 34,88" />
+                                </svg>
+                            </div>
+                            <span class="text-xs font-bold tracking-[0.2em] text-blue-300 uppercase">Company Profile</span>
+                            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">PT. ZAKYABADI</h2>
+                            <p class="text-sm text-blue-200 mt-1">Custom Logo Futsal & Bola</p>
+                            
+                            <div class="w-full h-px bg-white/15 my-5"></div>
+                            
+                            <div class="w-full space-y-2.5 text-left text-xs sm:text-sm text-blue-100">
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-location-dot text-blue-300 w-4 text-center"></i>
+                                    <span>Jl. Raya Bandung - Cianjur, Cianjur, Jawa Barat</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-brands fa-whatsapp text-emerald-400 w-4 text-center"></i>
+                                    <span>085189717050</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <i class="fa-solid fa-envelope text-blue-300 w-4 text-center"></i>
+                                    <span>zakyabadicustom@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. TENTANG KAMI, VISI MISI, CORE & KEUNGGULAN ==================== -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header Bagian -->
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-zaky-navy bg-zaky-light px-3.5 py-1.5 rounded-full">Tentang Perusahaan</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-4">Identitas Visual Modern untuk Tim Juara</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg leading-relaxed">
+                    <strong>PT. ZAKYABADI</strong> adalah perusahaan yang bergerak di bidang jasa custom logo futsal dan bola. Kami membantu tim, komunitas, dan klub memiliki identitas visual yang digital, modern, dan siap digunakan, mulai dari logo sederhana hingga desain jersey lengkap.
+                </p>
+            </div>
+
+            <!-- Visi & Misi Cards -->
+            <div class="grid md:grid-cols-2 gap-6 mb-14">
+                <div class="bg-zaky-navy text-white rounded-3xl p-8 shadow-lg relative overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-eye text-xl text-blue-200"></i>
+                    </div>
+                    <h3 class="font-display font-extrabold text-xl tracking-wide uppercase text-blue-200">VISI</h3>
+                    <p class="text-lg sm:text-xl font-semibold mt-2 leading-relaxed">
+                        "Menjadi salah satu penyedia custom logo futsal dan bola yang digital dan modern."
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 text-white rounded-3xl p-8 shadow-lg relative overflow-hidden">
+                    <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-bullseye text-xl text-emerald-300"></i>
+                    </div>
+                    <h3 class="font-display font-extrabold text-xl tracking-wide uppercase text-emerald-300">MISI</h3>
+                    <p class="text-lg sm:text-xl font-semibold mt-2 leading-relaxed">
+                        "Memberikan pelayanan dengan cepat kepada semua klien custom logo futsal dan bola."
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3 Core Perusahaan -->
+            <div class="mb-16">
+                <h3 class="font-display font-extrabold text-2xl text-slate-900 text-center mb-8">Core Perusahaan</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Core 01 -->
+                    <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-display font-extrabold text-3xl text-zaky-navy/25">01</span>
+                            <div class="w-10 h-10 rounded-xl bg-zaky-navy text-white flex items-center justify-center">
+                                <i class="fa-solid fa-users-gear"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-slate-900">Sumber Daya yang Berpengalaman</h4>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                            Tim yang berpengalaman dalam merancang logo dan identitas visual tim olahraga agar tampil berkarakter.
+                        </p>
+                    </div>
+
+                    <!-- Core 02 -->
+                    <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-display font-extrabold text-3xl text-zaky-navy/25">02</span>
+                            <div class="w-10 h-10 rounded-xl bg-zaky-navy text-white flex items-center justify-center">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-slate-900">Manajemen yang Sehat</h4>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                            Pengelolaan perusahaan yang tertata rapi agar kualitas hasil kerja selalu konsisten untuk setiap klien.
+                        </p>
+                    </div>
+
+                    <!-- Core 03 -->
+                    <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-7 card-hover">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-display font-extrabold text-3xl text-zaky-navy/25">03</span>
+                            <div class="w-10 h-10 rounded-xl bg-zaky-navy text-white flex items-center justify-center">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-slate-900">Pembuatan Logo yang Cepat</h4>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                            Proses desain yang efisien dan komunikatif agar logo tim Anda selesai tepat waktu sebelum pertandingan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Keunggulan Kami -->
+            <div class="bg-zaky-light/70 border border-zaky-navy/10 rounded-3xl p-8 sm:p-10">
+                <div class="text-center mb-8">
+                    <h3 class="font-display font-extrabold text-2xl text-zaky-navy">Keunggulan Kami</h3>
+                    <p class="text-sm text-slate-600 mt-1">Alasan puluhan tim futsal dan klub sepak bola mempercayakan identitasnya kepada kami</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-start gap-3.5">
+                        <div class="w-9 h-9 rounded-xl bg-zaky-navy/10 text-zaky-navy flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-box-open"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Paket Lengkap & Ramah</h4>
+                            <p class="text-xs text-slate-500 mt-1">Menawarkan pilihan paket lengkap sesuai kebutuhan tim.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-start gap-3.5">
+                        <div class="w-9 h-9 rounded-xl bg-zaky-navy/10 text-zaky-navy flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Prioritas Pelayanan</h4>
+                            <p class="text-xs text-slate-500 mt-1">Respon cepat dan konsultasi konsep desain yang bersahabat.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-start gap-3.5">
+                        <div class="w-9 h-9 rounded-xl bg-zaky-navy/10 text-zaky-navy flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Harga Kompetitif</h4>
+                            <p class="text-xs text-slate-500 mt-1">Biaya terjangkau untuk komunitas, kampus, maupun klub.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-100 flex items-start gap-3.5">
+                        <div class="w-9 h-9 rounded-xl bg-zaky-navy/10 text-zaky-navy flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-slate-900">Desain Logo Elegan</h4>
+                            <p class="text-xs text-slate-500 mt-1">Tampilan modern, tajam, dan gagah saat dicetak di jersey.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. LAYANAN & PILIHAN PAKET (INTERAKTIF) ==================== -->
+    <section id="layanan" class="py-20 bg-slate-100/80 border-y border-slate-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-zaky-navy bg-white px-3.5 py-1.5 rounded-full shadow-xs border border-slate-200">Layanan Kami</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-4">Penawaran Utama Paket Custom</h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Pilih paket custom logo futsal dan bola sesuai kebutuhan tim Anda. Klik tombol <strong>"Pilih Paket Ini"</strong> untuk langsung mengisi formulir pemesanan.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <!-- PAKET 01: Paket Hemat -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-extrabold tracking-widest uppercase text-zaky-navy bg-zaky-light px-3 py-1 rounded-lg">PAKET 01</span>
+                            <i class="fa-solid fa-shield text-slate-300 text-xl"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-slate-900">Paket Hemat</h3>
+                        <p class="text-sm text-slate-500 mt-1">Cocok untuk tim baru yang membutuhkan logo siap pakai untuk media sosial.</p>
+                        
+                        <div class="my-6 py-4 px-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-semibold text-slate-500 block">Penawaran Harga</span>
+                            <span class="font-display font-extrabold text-lg text-zaky-navy">Harga Kompetitif / Hubungi Admin</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>Logo PNG biasa</strong> (Resolusi Tinggi & Transparan)</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-400">
+                                <span class="w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-minus"></i></span>
+                                <span>File Master Vector</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-slate-400">
+                                <span class="w-5 h-5 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-minus"></i></span>
+                                <span>Desain Jersey & Mockup</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" onclick="selectPackage('Paket 01 - Paket Hemat')" class="w-full py-3.5 px-5 rounded-xl border-2 border-zaky-navy text-zaky-navy hover:bg-zaky-navy hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                        <span>Pilih Paket 01</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- PAKET 02: Paket Standar (TERLENGKAP / POPULER sesuai brosur halaman 3) -->
+                <div class="bg-zaky-navy text-white rounded-3xl p-8 border-2 border-zaky-navy shadow-2xl shadow-zaky-navy/25 flex flex-col justify-between relative card-hover lg:-translate-y-2">
+                    <!-- Badge TERLENGKAP sesuai brosur -->
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+                        <span class="bg-amber-400 text-zaky-dark font-display font-extrabold text-xs tracking-wider uppercase px-4 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-star"></i>
+                            <span>TERLENGKAP / POPULER</span>
+                        </span>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4 mt-2">
+                            <span class="text-xs font-extrabold tracking-widest uppercase text-blue-200 bg-white/15 px-3 py-1 rounded-lg">PAKET 02</span>
+                            <i class="fa-solid fa-crown text-amber-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white">Paket Standar</h3>
+                        <p class="text-sm text-blue-200 mt-1">Pilihan favorit tim untuk kebutuhan cetak sablon, banner, maupun digital.</p>
+                        
+                        <div class="my-6 py-4 px-4 rounded-2xl bg-white/10 border border-white/15">
+                            <span class="text-xs font-semibold text-blue-200 block">Penawaran Harga</span>
+                            <span class="font-display font-extrabold text-lg text-white">Harga Kompetitif / Hubungi Admin</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-blue-50 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-emerald-400 text-zaky-dark flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>Logo Utama</strong> (PNG HD & JPG)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-emerald-400 text-zaky-dark flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>File Vector</strong> (CDR / AI / EPS / PDF siap cetak)</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-blue-300/60">
+                                <span class="w-5 h-5 rounded-full bg-white/10 text-blue-300/60 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-minus"></i></span>
+                                <span>Desain Jersey & Mockup</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" onclick="selectPackage('Paket 02 - Paket Standar')" class="w-full py-3.5 px-5 rounded-xl bg-white text-zaky-navy hover:bg-blue-50 font-extrabold text-sm shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer">
+                        <span>Pilih Paket 02</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </button>
+                </div>
+
+                <!-- PAKET 03: Paket Komplit -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-extrabold tracking-widest uppercase text-zaky-navy bg-zaky-light px-3 py-1 rounded-lg">PAKET 03</span>
+                            <i class="fa-solid fa-shirt text-zaky-navy text-xl"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-slate-900">Paket Komplit</h3>
+                        <p class="text-sm text-slate-500 mt-1">Solusi menyeluruh untuk identitas klub dari logo hingga tampilan jersey.</p>
+                        
+                        <div class="my-6 py-4 px-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <span class="text-xs font-semibold text-slate-500 block">Penawaran Harga</span>
+                            <span class="font-display font-extrabold text-lg text-zaky-navy">Harga Kompetitif / Hubungi Admin</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-700 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>Logo Tim Custom</strong> (PNG & Master File)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>Desain Jersey</strong> (Depan, Belakang & Celana)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0"><i class="fa-solid fa-check"></i></span>
+                                <span><strong>Mockup 3D Realistis</strong> Siap Presentasi Sponsor</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button type="button" onclick="selectPackage('Paket 03 - Paket Komplit')" class="w-full py-3.5 px-5 rounded-xl border-2 border-zaky-navy text-zaky-navy hover:bg-zaky-navy hover:text-white font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer">
+                        <span>Pilih Paket 03</span>
+                        <i class="fa-solid fa-arrow-down text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. GALERI PORTOFOLIO KLIEN KAMI (8 SLOT) ==================== -->
+    <section id="portofolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-zaky-navy bg-zaky-light px-3.5 py-1.5 rounded-full">Klien Kami</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-4">Portofolio & Klien PT. ZAKYABADI</h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Klien yang pernah menggunakan jasa custom logo futsal dan sepak bola kami.
+                </p>
+            </div>
+
+            <!-- Grid 8 Slot Portofolio sesuai Halaman 4 Company Profile -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-6" id="client-gallery">
+                <!-- Slot 1 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 1</span>
+                    <span class="text-xs text-slate-500 mt-1">Futsal Club Crest</span>
+                </div>
+
+                <!-- Slot 2 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-futbol text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 2</span>
+                    <span class="text-xs text-slate-500 mt-1">Football Academy</span>
+                </div>
+
+                <!-- Slot 3 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-trophy text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 3</span>
+                    <span class="text-xs text-slate-500 mt-1">Komunitas Futsal</span>
+                </div>
+
+                <!-- Slot 4 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-dragon text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 4</span>
+                    <span class="text-xs text-slate-500 mt-1">Mascot Esport & Sport</span>
+                </div>
+
+                <!-- Slot 5 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-medal text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 5</span>
+                    <span class="text-xs text-slate-500 mt-1">Turnamen Cup</span>
+                </div>
+
+                <!-- Slot 6 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-shirt text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 6</span>
+                    <span class="text-xs text-slate-500 mt-1">Logo & Jersey Set</span>
+                </div>
+
+                <!-- Slot 7 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-bolt-lightning text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 7</span>
+                    <span class="text-xs text-slate-500 mt-1">Modern Monogram FC</span>
+                </div>
+
+                <!-- Slot 8 -->
+                <div class="group bg-zaky-light/50 border-2 border-dashed border-zaky-navy/30 hover:border-zaky-navy rounded-2xl aspect-square p-5 flex flex-col items-center justify-center text-center transition-all hover:bg-zaky-light">
+                    <div class="w-16 h-16 rounded-2xl bg-zaky-navy/10 group-hover:bg-zaky-navy group-hover:text-white text-zaky-navy flex items-center justify-center mb-3 transition-colors">
+                        <i class="fa-solid fa-crown text-2xl"></i>
+                    </div>
+                    <span class="font-display font-bold text-slate-800 text-sm sm:text-base">Logo Klien 8</span>
+                    <span class="text-xs text-slate-500 mt-1">United Squad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. FORM PEMESANAN CUSTOM LOGO & JERSEY ==================== -->
+    <section id="pemesanan" class="py-20 bg-slate-100 border-t border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-zaky-navy bg-white px-3.5 py-1.5 rounded-full border border-slate-200">Formulir Pemesanan</span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-4">Mulai Buat Logo Tim Impian Anda</h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Isi detail tim dan konsep desain di bawah ini. Pesanan Anda akan langsung terformat rapi untuk dikirim ke WhatsApp admin <strong>PT. ZAKYABADI</strong>.
+                </p>
+            </div>
+
+            <!-- Notifikasi Status Paket Terpilih -->
+            <div id="package-toast" class="hidden mb-6 bg-zaky-navy text-white px-5 py-3.5 rounded-2xl shadow-md flex items-center justify-between">
+                <div class="flex items-center gap-3 text-sm font-medium">
+                    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                    <span>Paket dipilih: <strong id="selected-package-label">Paket 02 - Paket Standar</strong></span>
+                </div>
+                <button type="button" onclick="document.getElementById('package-toast').classList.add('hidden')" class="text-blue-200 hover:text-white text-xs">Tutup</button>
+            </div>
+
+            <!-- Form Container -->
+            <form id="orderForm" class="bg-white rounded-3xl shadow-xl border border-slate-200/80 p-6 sm:p-10 space-y-7">
+                <!-- Baris 1: Nama Pemesan & No WhatsApp -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="customerName" class="block text-sm font-bold text-slate-800 mb-2">
+                            Nama Pemesan / Manajer Tim <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" id="customerName" required placeholder="Contoh: Zaky Pratama"
+                                class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="customerWa" class="block text-sm font-bold text-slate-800 mb-2">
+                            Nomor WhatsApp Pemesan <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-emerald-600">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </span>
+                            <input type="tel" id="customerWa" required placeholder="Contoh: 081234567890"
+                                class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baris 2: Nama Tim & Kategori Olahraga -->
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div class="sm:col-span-2">
+                        <label for="teamName" class="block text-sm font-bold text-slate-800 mb-2">
+                            Nama Tim Futsal / Sepak Bola <span class="text-red-500">*</span>
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </span>
+                            <input type="text" id="teamName" required placeholder="Contoh: Cianjur United FC / Garuda Futsal"
+                                class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="sportType" class="block text-sm font-bold text-slate-800 mb-2">
+                            Kategori Tim
+                        </label>
+                        <select id="sportType" class="w-full px-4 py-3.5 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm bg-white transition-all">
+                            <option value="Tim Futsal">Tim Futsal</option>
+                            <option value="Klub Sepak Bola">Klub Sepak Bola</option>
+                            <option value="Komunitas / Akademi">Komunitas / Akademi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Baris 3: Pilihan Paket (Radio Cards Interaktif) -->
+                <div>
+                    <label class="block text-sm font-bold text-slate-800 mb-3">
+                        Pilih Paket Layanan <span class="text-red-500">*</span>
+                    </label>
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <!-- Radio Paket 01 -->
+                        <label class="cursor-pointer relative">
+                            <input type="radio" name="packageOption" value="Paket 01 - Paket Hemat" class="peer sr-only">
+                            <div class="p-4 rounded-2xl border-2 border-slate-200 peer-checked:border-zaky-navy peer-checked:bg-zaky-light/60 hover:border-slate-300 transition-all h-full">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[11px] font-extrabold uppercase text-zaky-navy">Paket 01</span>
+                                    <span class="w-4 h-4 rounded-full border border-slate-300 flex items-center justify-center peer-checked:border-zaky-navy"></span>
+                                </div>
+                                <p class="font-bold text-slate-900 text-sm">Paket Hemat</p>
+                                <p class="text-xs text-slate-500 mt-1">Logo PNG biasa</p>
+                            </div>
+                        </label>
+
+                        <!-- Radio Paket 02 (Default Selected) -->
+                        <label class="cursor-pointer relative">
+                            <input type="radio" name="packageOption" value="Paket 02 - Paket Standar" checked class="peer sr-only">
+                            <div class="p-4 rounded-2xl border-2 border-slate-200 peer-checked:border-zaky-navy peer-checked:bg-zaky-light/60 hover:border-slate-300 transition-all h-full">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[11px] font-extrabold uppercase text-zaky-navy">Paket 02</span>
+                                    <span class="text-[10px] font-bold bg-amber-400 text-zaky-dark px-2 py-0.5 rounded-full">Populer</span>
+                                </div>
+                                <p class="font-bold text-slate-900 text-sm">Paket Standar</p>
+                                <p class="text-xs text-slate-500 mt-1">Logo + File Vector</p>
+                            </div>
+                        </label>
+
+                        <!-- Radio Paket 03 -->
+                        <label class="cursor-pointer relative">
+                            <input type="radio" name="packageOption" value="Paket 03 - Paket Komplit" class="peer sr-only">
+                            <div class="p-4 rounded-2xl border-2 border-slate-200 peer-checked:border-zaky-navy peer-checked:bg-zaky-light/60 hover:border-slate-300 transition-all h-full">
+                                <div class="flex items-center justify-between mb-1">
+                                    <span class="text-[11px] font-extrabold uppercase text-zaky-navy">Paket 03</span>
+                                </div>
+                                <p class="font-bold text-slate-900 text-sm">Paket Komplit</p>
+                                <p class="text-xs text-slate-500 mt-1">Logo + Desain Jersey + Mockup</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Baris 4: Pilihan Warna Utama & Sekunder Tim -->
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2">
+                            Warna Utama Tim
+                        </label>
+                        <div class="flex items-center gap-3">
+                            <input type="color" id="primaryColorPicker" value="#000066"
+                                class="w-12 h-12 rounded-xl border border-slate-300 cursor-pointer p-1 bg-white shrink-0">
+                            <input type="text" id="primaryColorText" value="Biru Dongker (#000066)" placeholder="Nama warna / kode hex"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2">
+                            Warna Sekunder / Aksen
+                        </label>
+                        <div class="flex items-center gap-3">
+                            <input type="color" id="secondaryColorPicker" value="#FFFFFF"
+                                class="w-12 h-12 rounded-xl border border-slate-300 cursor-pointer p-1 bg-white shrink-0">
+                            <input type="text" id="secondaryColorText" value="Putih (#FFFFFF)" placeholder="Nama warna / kode hex"
+                                class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baris 5: Konsep / Referensi Logo -->
+                <div>
+                    <label for="conceptNotes" class="block text-sm font-bold text-slate-800 mb-2">
+                        Konsep / Referensi Logo & Catatan Tambahan <span class="text-red-500">*</span>
+                    </label>
+                    <textarea id="conceptNotes" rows="4" required
+                        placeholder="Jelaskan keinginan desain Anda. Contoh: Bentuk perisai modern dengan maskot elang, inisial huruf CU di tengah, tahun berdiri 2026, gaya minimalis elegan..."
+                        class="w-full p-4 rounded-xl border border-slate-300 focus:border-zaky-navy focus:ring-2 focus:ring-zaky-navy/20 outline-none text-sm transition-all"></textarea>
+                    
+                    <!-- Chip Saran Konsep Cepat -->
+                    <div class="flex flex-wrap items-center gap-2 mt-2.5">
+                        <span class="text-xs text-slate-500">Ide cepat:</span>
+                        <button type="button" onclick="appendIdea('Perisai Modern + Monogram Inisial Tim')" class="text-xs bg-slate-100 hover:bg-zaky-light text-slate-700 hover:text-zaky-navy px-3 py-1 rounded-full transition-colors cursor-pointer">+ Perisai & Monogram</button>
+                        <button type="button" onclick="appendIdea('Maskot Hewan Agresif (Elang/Macan)')" class="text-xs bg-slate-100 hover:bg-zaky-light text-slate-700 hover:text-zaky-navy px-3 py-1 rounded-full transition-colors cursor-pointer">+ Maskot Hewan</button>
+                        <button type="button" onclick="appendIdea('Gaya Klasik Eropa dengan Pita Slogan')" class="text-xs bg-slate-100 hover:bg-zaky-light text-slate-700 hover:text-zaky-navy px-3 py-1 rounded-full transition-colors cursor-pointer">+ Klasik Eropa</button>
+                    </div>
+                </div>
+
+                <!-- Pesan Validasi Inline (Pengganti alert) -->
+                <div id="formErrorBox" class="hidden bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm flex items-center gap-2.5">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <span id="formErrorText">Mohon lengkapi semua kolom wajib bertanda bintang (*).</span>
+                </div>
+
+                <!-- Tombol Aksi -->
+                <div class="pt-3 grid sm:grid-cols-2 gap-4">
+                    <button type="button" onclick="previewInvoice()" class="w-full py-4 px-6 rounded-2xl border-2 border-zaky-navy text-zaky-navy hover:bg-zaky-light font-bold text-sm sm:text-base transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+                        <i class="fa-solid fa-file-invoice"></i>
+                        <span>Simpan & Lihat Ringkasan Pesanan</span>
+                    </button>
+
+                    <button type="submit" class="w-full py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center gap-2.5 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Kirim Pesanan via WhatsApp</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL RINGKASAN PESANAN / INVOICE ==================== -->
+    <div id="invoiceModal" class="hidden fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full shadow-2xl overflow-hidden animate-[fadeIn_0.2s_ease-out]">
+            <!-- Header Modal -->
+            <div class="bg-zaky-navy text-white px-6 py-5 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-white/15 flex items-center justify-center">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-lg leading-tight">Ringkasan Pesanan</h3>
+                        <p class="text-xs text-blue-200" id="invoiceOrderId">ID: #ZKY-0000</p>
+                    </div>
+                </div>
+                <button type="button" onclick="closeInvoiceModal()" class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Isi Ringkasan -->
+            <div class="p-6 space-y-4 text-sm max-h-[70vh] overflow-y-auto">
+                <div class="bg-zaky-light/70 border border-zaky-navy/10 rounded-2xl p-4 space-y-2.5">
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Pemesan / Manajer:</span>
+                        <span class="font-bold text-slate-900" id="sumName">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">No. WhatsApp:</span>
+                        <span class="font-semibold text-slate-800" id="sumWa">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Nama Tim:</span>
+                        <span class="font-bold text-zaky-navy" id="sumTeam">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-slate-500">Paket Layanan:</span>
+                        <span class="font-bold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-md text-xs" id="sumPackage">-</span>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-4 space-y-2">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Kombinasi Warna</p>
+                    <div class="flex flex-wrap gap-3 pt-1">
+                        <div class="flex items-center gap-2 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
+                            <span id="sumColor1Dot" class="w-4 h-4 rounded-full border border-slate-300"></span>
+                            <span class="text-xs font-semibold" id="sumColor1">-</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-200">
+                            <span id="sumColor2Dot" class="w-4 h-4 rounded-full border border-slate-300"></span>
+                            <span class="text-xs font-semibold" id="sumColor2">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl p-4">
+                    <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5">Konsep & Referensi</p>
+                    <p class="text-slate-700 leading-relaxed whitespace-pre-line" id="sumConcept">-</p>
+                </div>
+
+                <!-- Area Teks Tersembunyi untuk Copy Clipboard -->
+                <textarea id="clipboardSummaryText" class="sr-only" readonly></textarea>
+                <div id="copyFeedback" class="hidden text-center text-xs font-semibold text-emerald-600">
+                    <i class="fa-solid fa-check"></i> Detail pesanan berhasil disalin ke clipboard!
+                </div>
+            </div>
+
+            <!-- Footer Modal -->
+            <div class="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                <button type="button" onclick="copyOrderSummary()" class="w-full sm:w-auto px-4 py-3 rounded-xl border border-slate-300 bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-regular fa-copy"></i>
+                    <span>Salin Detail</span>
+                </button>
+                <button type="button" onclick="sendToWhatsApp()" class="w-full flex-1 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Lanjut Kirim ke WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== 7. FOOTER & KONTAK ==================== -->
+    <footer id="kontak" class="bg-zaky-navy text-white relative overflow-hidden">
+        <!-- Aksen Sudut Kanan Atas seperti halaman 4 Company Profile -->
+        <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full bg-white/10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-10 pb-12 border-b border-white/15">
+                <!-- Kolom Brand -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-11 h-11 bg-white rounded-xl flex items-center justify-center">
+                            <svg viewBox="0 0 100 100" class="w-7 h-7 fill-zaky-navy" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="32,12 72,12 58,30 40,30 22,50 40,72 28,88 6,50" />
+                                <polygon points="82,12 96,12 56,72 86,72 95,88 34,88" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-display font-extrabold text-xl tracking-tight text-white block">PT. ZAKYABADI</span>
+                            <span class="text-xs text-blue-200">Custom Logo Futsal & Bola</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-blue-100/85 leading-relaxed max-w-md">
+                        Terima kasih atas kepercayaan Anda. Wujudkan logo tim futsal dan bola impian Anda bersama <strong>PT. ZAKYABADI</strong> — Digital Modern | Cepat.
+                    </p>
+                </div>
+
+                <!-- Kolom Kontak Resmi (Halaman 4 Company Profile) -->
+                <div class="lg:col-span-7 grid sm:grid-cols-3 gap-6">
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
+                        <span class="text-[11px] font-bold tracking-widest uppercase text-blue-300 block mb-2">ALAMAT</span>
+                        <p class="text-sm font-semibold text-white leading-relaxed">
+                            Jl. Raya Bandung - Cianjur, Cianjur, Jawa Barat
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
+                        <span class="text-[11px] font-bold tracking-widest uppercase text-blue-300 block mb-2">TELEPON / WHATSAPP</span>
+                        <a href="https://wa.me/6285189717050" target="_blank" rel="noopener noreferrer" class="text-base font-extrabold text-white hover:text-emerald-300 transition-colors inline-flex items-center gap-2">
+                            <span>085189717050</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                        <span class="text-xs text-blue-200 block mt-1">Fast Response Admin</span>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5">
+                        <span class="text-[11px] font-bold tracking-widest uppercase text-blue-300 block mb-2">EMAIL</span>
+                        <a href="mailto:zakyabadicustom@gmail.com" class="text-sm font-bold text-white hover:text-blue-200 transition-colors break-all">
+                            zakyabadicustom@gmail.com
+                        </a>
+                        <span class="text-xs text-blue-200 block mt-1">Kirim Brief & File</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-blue-200">
+                <p>&copy; 2026 PT. ZAKYABADI. Seluruh Hak Cipta Dilindungi.</p>
+                <p>Jl. Raya Bandung - Cianjur, Cianjur, Jawa Barat</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT INTERAKTIVITAS ==================== -->
+    <script>
+        // 1. Toggle Menu Navigasi Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tutup menu mobile saat link diklik
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Sinkronisasi Color Picker dengan Input Teks Warna
+        const primaryPicker = document.getElementById('primaryColorPicker');
+        const primaryText = document.getElementById('primaryColorText');
+        const secondaryPicker = document.getElementById('secondaryColorPicker');
+        const secondaryText = document.getElementById('secondaryColorText');
+
+        primaryPicker.addEventListener('input', (e) => {
+            primaryText.value = `Warna Kustom (${e.target.value.toUpperCase()})`;
+        });
+
+        secondaryPicker.addEventListener('input', (e) => {
+            secondaryText.value = `Warna Kustom (${e.target.value.toUpperCase()})`;
+        });
+
+        // 3. Fungsi Pilih Paket dari Section Layanan -> Otomatis pilih radio button & scroll ke form
+        function selectPackage(packageValue) {
+            const radios = document.querySelectorAll('input[name="packageOption"]');
+            radios.forEach(radio => {
+                if (radio.value === packageValue) {
+                    radio.checked = true;
+                }
+            });
+
+            // Tampilkan notifikasi kecil di atas form
+            const toast = document.getElementById('package-toast');
+            const toastLabel = document.getElementById('selected-package-label');
+            toastLabel.textContent = packageValue;
+            toast.classList.remove('hidden');
+
+            // Scroll mulus ke formulir pemesanan
+            const formSection = document.getElementById('pemesanan');
+            formSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 4. Tambah Ide Konsep Cepat ke Textarea
+        function appendIdea(ideaText) {
+            const textarea = document.getElementById('conceptNotes');
+            if (textarea.value.trim() === '') {
+                textarea.value = ideaText;
+            } else {
+                textarea.value += ', ' + ideaText;
+            }
+            textarea.focus();
+        }
+
+        // 5. Ambil & Validasi Data Form Pemesanan
+        function getValidatedFormData() {
+            const name = document.getElementById('customerName').value.trim();
+            const wa = document.getElementById('customerWa').value.trim();
+            const team = document.getElementById('teamName').value.trim();
+            const sport = document.getElementById('sportType').value;
+            const selectedRadio = document.querySelector('input[name="packageOption"]:checked');
+            const pkg = selectedRadio ? selectedRadio.value : 'Paket 02 - Paket Standar';
+            const color1 = document.getElementById('primaryColorText').value.trim() || primaryPicker.value;
+            const color2 = document.getElementById('secondaryColorText').value.trim() || secondaryPicker.value;
+            const concept = document.getElementById('conceptNotes').value.trim();
+
+            const errorBox = document.getElementById('formErrorBox');
+            const errorText = document.getElementById('formErrorText');
+
+            if (!name || !wa || !team || !concept) {
+                errorText.textContent = 'Mohon lengkapi Nama Pemesan, Nomor WhatsApp, Nama Tim, dan Konsep Logo terlebih dahulu.';
+                errorBox.classList.remove('hidden');
+                errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return null;
+            }
+
+            errorBox.classList.add('hidden');
+            return {
+                orderId: 'ZKY-' + Math.floor(1000 + Math.random() * 9000),
+                name,
+                wa,
+                team,
+                sport,
+                pkg,
+                color1,
+                color1Hex: primaryPicker.value,
+                color2,
+                color2Hex: secondaryPicker.value,
+                concept
+            };
+        }
+
+        // 6. Format Pesan Rapi untuk WhatsApp & Clipboard
+        function formatOrderMessage(data) {
+            return `Halo Admin *PT. ZAKYABADI*, saya ingin memesan layanan custom logo tim:\n\n` +
+                   `*ID Pesanan:* #${data.orderId}\n` +
+                   `*Nama Pemesan:* ${data.name}\n` +
+                   `*No. WhatsApp:* ${data.wa}\n` +
+                   `*Nama Tim:* ${data.team} (${data.sport})\n` +
+                   `*Pilihan Paket:* ${data.pkg}\n` +
+                   `*Warna Utama:* ${data.color1}\n` +
+                   `*Warna Sekunder:* ${data.color2}\n` +
+                   `*Konsep / Referensi:*\n${data.concept}\n\n` +
+                   `Mohon informasi estimasi pengerjaan dan langkah selanjutnya. Terima kasih!`;
+        }
+
+        // 7. Tampilkan Modal Ringkasan Pesanan / Invoice
+        function previewInvoice() {
+            const data = getValidatedFormData();
+            if (!data) return;
+
+            document.getElementById('invoiceOrderId').textContent = `ID Pesanan: #${data.orderId}`;
+            document.getElementById('sumName').textContent = data.name;
+            document.getElementById('sumWa').textContent = data.wa;
+            document.getElementById('sumTeam').textContent = `${data.team} (${data.sport})`;
+            document.getElementById('sumPackage').textContent = data.pkg;
+            document.getElementById('sumColor1').textContent = data.color1;
+            document.getElementById('sumColor1Dot').style.backgroundColor = data.color1Hex;
+            document.getElementById('sumColor2').textContent = data.color2;
+            document.getElementById('sumColor2Dot').style.backgroundColor = data.color2Hex;
+            document.getElementById('sumConcept').textContent = data.concept;
+
+            // Simpan teks terformat ke textarea clipboard
+            document.getElementById('clipboardSummaryText').value = formatOrderMessage(data);
+            document.getElementById('copyFeedback').classList.add('hidden');
+
+            // Simpan ke localStorage sebagai riwayat lokal pengguna
+            try {
+                localStorage.setItem('zakyabadi_last_order', JSON.stringify(data));
+            } catch (e) {
+                // Abaikan jika storage dibatasi browser
+            }
+
+            document.getElementById('invoiceModal').classList.remove('hidden');
+        }
+
+        function closeInvoiceModal() {
+            document.getElementById('invoiceModal').classList.add('hidden');
+        }
+
+        // 8. Salin Detail Pesanan menggunakan document.execCommand('copy')
+        function copyOrderSummary() {
+            const copyText = document.getElementById('clipboardSummaryText');
+            copyText.classList.remove('sr-only');
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            try {
+                document.execCommand('copy');
+                document.getElementById('copyFeedback').classList.remove('hidden');
+            } catch (err) {
+                console.error('Gagal menyalin teks', err);
+            }
+            copyText.classList.add('sr-only');
+        }
+
+        // 9. Kirim Langsung ke WhatsApp PT. ZAKYABADI (6285189717050)
+        function sendToWhatsApp() {
+            const data = getValidatedFormData();
+            if (!data) return;
+
+            const message = formatOrderMessage(data);
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/6285189717050?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        // Event Submit Form Utama
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            sendToWhatsApp();
+        });
+    </script>
+</body>
+</html>
